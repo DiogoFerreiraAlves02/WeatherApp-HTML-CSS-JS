@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="script.js"></script>
+    <title>Weather App by Diogo Alves</title>
+</head>
+
+<body>
+    <div class="container">
+        <input class="city-input" placeholder="CITY NAME">
+        <button class="search-button">
+            <img class="search-img" src="https://www.svgrepo.com/show/488200/find.svg" alt="search" onclick="search()">
+        </button>
+
+        <div class="info-container">
+            <h2 class="city"></h2>
+
+            <p class="temp"></p>
+
+            <div class="small-container">
+                <img class="img-prev" alt="weather icon">
+                <p class="prev-text"></p>
+            </div>
+
+            <p class="hum-text"></p>
+        </div>
+    </div>
+</body>
+
+</html>
