@@ -1,4 +1,4 @@
-const key = "910c30a4cb733a65d6e5b968d7518841";
+const myKey = config.MY_KEY;
 
 function setCityInfo(data){
     document.querySelector(".city").innerHTML = "Weather in " + data.name;
@@ -10,7 +10,7 @@ function setCityInfo(data){
 } 
 
 async function getCityInfo(city){
-    const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`).then(response => response.json());
+    const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${myKey}&units=metric`).then(response => response.json());
     setCityInfo(data);
 }
 
