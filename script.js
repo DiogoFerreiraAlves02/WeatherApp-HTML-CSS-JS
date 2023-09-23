@@ -10,8 +10,15 @@ function setCityInfo(data){
 } 
 
 async function getCityInfo(city){
-    const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${myKey}&units=metric`).then(response => response.json());
-    setCityInfo(data);
+    const APIResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${myKey}&units=metric`);
+    if(APIResponse.status === 200){
+        const data = await APIResponse.json();
+        setCityInfo(data);
+    }
+    else{
+        alert("Local Not Found :c");
+    }
+    document.querySelector(".city-input").value = "";
 }
 
 function search(){
